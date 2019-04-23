@@ -1,9 +1,10 @@
 import React from 'react';
 
-function Card(props) {
+
+export default function Card(props) {
   return (
     <div className='Card'>
-      <button 
+      <button
         type='button'
       >
         delete
@@ -13,5 +14,3 @@ function Card(props) {
     </div>
   )
 }
-
-export default Card;

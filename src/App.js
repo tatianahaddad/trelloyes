@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
-import List from './composition/List';
+import List from './List';
 
 class App extends Component {
   static defaultProps = {
@@ -10,23 +10,23 @@ class App extends Component {
     }
   };
 
-render () {
-  const { store } = this.props
-  return (
-    <main className='App'>
-      <header className='App-header'>
-      <h1>Trelloyes!</h1>
-      </header>
-      <div className='App-list'>
-        {store.list.map(list => (
-          <List
-            key={list.id}
-            header={list.header}
-            cards={list.cardIds.map(id => store.allCards[id])}
-          />
-        ))}
-      </div>
-    </main>
+  render() {
+    const { store } = this.props
+    return (
+      <main className='App'>
+        <header className='App-header'>
+          <h1>Trelloyes!</h1>
+        </header>
+        <div className='App-list'>
+          {store.lists.map(list => (
+            <List
+              key={list.id}
+              header={list.header}
+              cards={list.cardIds.map(id => store.allCards[id])}
+            />
+          ))}
+        </div>
+      </main>
     );
   }
 }

@@ -1,7 +1,7 @@
 import React from 'react';
-import Card from './composition/Card.js';
+import Card from './Card'
 
-function List(props) {
+export default function List(props) {
   return (
     <section className='List'>
       <header className='List-header'>
@@ -25,5 +25,3 @@ function List(props) {
     </section>
   )
 }
-
-export default List;
