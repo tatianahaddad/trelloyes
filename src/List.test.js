@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import List from './List';
 import renderer from 'react-test-renderer';
+import Card from './Card';
 
 describe ('List components', () => {
   it ('renders List without crashing', () => {
